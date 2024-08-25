@@ -1,0 +1,30 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Convert PDF to PNG",
+        "type": "shell",
+        "command": "magick",
+        "args": [
+          "-density",
+          "300",
+          "\"Diego's Resume.pdf\"",
+          "-quality",
+          "90",
+          "-background",
+          "white",
+          "-alpha",
+          "remove",
+          "-alpha",
+          "off",
+          "\"Diego's Resume.png\""
+        ],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "problemMatcher": []
+      }
+    ]
+  }
+  

@@ -126,3 +126,9 @@ sympy-plots-for-*.tex/
 # WinEdt
 *.bak
 *.sav
+
+# Personal info
+ContactInfo.tex
+
+# Macos
+.DS_Store
