@@ -15,4 +15,4 @@ My current personal resume
 
 ### Extra
 
-- `brew install imagemagick` to be able to convert the pdf into png to upload
+- `brew install imagemagick` to be able to convert the pdf into png to upload (Cmd + Shift + B)

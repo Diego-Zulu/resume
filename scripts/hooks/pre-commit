@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# Files to check
+TEX_FILE="Diego's Resume.tex"
+PNG_FILE="Diego's Resume.png"
+
+# Check if the .tex file is modified and staged for commit
+if git diff --cached --name-only | grep -q "^$TEX_FILE$"; then
+    # Check if the .png file is not staged for commit
+    if ! git diff --cached --name-only | grep -q "^$PNG_FILE$"; then
+        echo "Error: You have modified $TEX_FILE, but $PNG_FILE is not updated."
+        echo "Please update $PNG_FILE before committing."
+        exit 1
+    fi
+fi
+
+exit 0
